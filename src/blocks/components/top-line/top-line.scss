@@ -1,0 +1,52 @@
+.top-line {
+    @include padding(top, level_15);
+    @include padding(bottom, level_5);
+    display: flex;
+    align-items: center;
+
+    &__nav {
+        flex-grow: 1;
+    }
+    &__info {
+        display: flex;
+        padding-left: 32px;
+    }
+    &__language {
+        padding-right: 32px;
+    }
+    &__call {
+        padding-left: 32px;
+        border-left: {
+            width: 1px;
+            style: solid;
+            color: $white;
+        }
+    }
+    &__subtitle {
+        font-size: rem($text-smallest);
+        line-height: 200%;
+    }
+    &__number {
+        color: $white;
+        font-weight: 600;
+        font-size: rem($text-large);
+        line-height: 120%;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: {
+            property: color;
+            duration: $duration;
+        }
+    }
+}
+.top-line_theme_white {
+    .top-line__subtitle {
+        color: $gray-light;
+    }
+    .top-line__number {
+        color: $gray-light;
+    }
+    .top-line__number:hover {
+        color: rgba($gray-light, .8);
+    }
+}

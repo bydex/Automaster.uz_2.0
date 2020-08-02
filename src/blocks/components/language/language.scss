@@ -1,0 +1,31 @@
+.language {
+    &__list {
+        display: flex;
+        margin-right: -8px;
+        margin-left: -8px;
+    }
+    &__item {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-right: 8px;
+        margin-left: 8px;
+        font-size: rem($text-smallest);
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: {
+            property: color;
+            duration: $duration;
+        }
+    }
+}
+
+.language_theme_white {
+    .language__item {
+        color: $gray-light;
+    }
+    .language__item_active,
+    .language__item:hover {
+        color: $secondary;
+    }
+}

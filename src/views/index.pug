@@ -1,0 +1,19 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header
+include ../blocks/modules/sidebar/sidebar
+include ../blocks/modules/main/main
+
+block variables
+	- const title = "Automaster.uz 2.0"
+
+block content
+	.site-container
+		+sidebar({})
+		section.content
+			+header({})
+			+main({})
+
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

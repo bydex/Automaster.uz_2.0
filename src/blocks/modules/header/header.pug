@@ -1,0 +1,45 @@
+include ../../components/btn/btn
+include ../../components/top-line/top-line
+include ../../components/thumbnail/thumbnail
+
+mixin header({className = false})
+    header.header(class=className)
+        .header__background.swiper-container
+            .swiper-wrapper
+                .header__background-item.swiper-slide(style='background-image: url(\'./img/main-slider/big-banner_bg-1.jpg\')')
+                .header__background-item.swiper-slide(style='background-image: url(\'./img/main-slider/big-banner_bg-2.jpg\')')
+                .header__background-item.swiper-slide(style='background-image: url(\'./img/main-slider/big-banner_bg-3.jpg\')')
+        .container
+            .header__inner
+                +top-line({className: 'top-line_theme_white'})
+                .header__slider.swiper-container
+                    .header__slides.swiper-wrapper
+                        .header__slide.swiper-slide
+                            .row
+                                h1.h1-heading.header__title  Новое поступление шиномонтажных станков
+                                .header__description Автоматический ввод трех  параметров, LCD монитор,  мультиоператор, aludata, 220В
+                            +btn({text: 'Подробнее',
+                                className: 'btn_theme_primary btn_size_standard ' +
+                                'cube cube_theme_primary cube_size_small ' +
+                                'header__btn' })
+                        .header__slide.swiper-slide
+                            .row
+                                h1.h1-heading.header__title  Новое поступление шиномонтажных станков
+                                .header__description Автоматический ввод трех  параметров, LCD монитор,  мультиоператор, aludata, 220В
+                            +btn({text: 'Подробнее',
+                                className: 'btn_theme_primary btn_size_standard ' +
+                                'cube cube_theme_primary cube_size_small ' +
+                                'header__btn' })
+                        .header__slide.swiper-slide
+                            .row
+                                h1.h1-heading.header__title  Новое поступление шиномонтажных станков
+                                .header__description Автоматический ввод трех  параметров, LCD монитор,  мультиоператор, aludata, 220В
+                            +btn({text: 'Подробнее',
+                                className: 'btn_theme_primary btn_size_standard ' +
+                                'cube cube_theme_primary cube_size_small ' +
+                                'header__btn' })
+                .header__thumbnails.swiper-container
+                    .header__thumbnails-slides.swiper-wrapper
+                        +thumbnail({className: 'swiper-slide header__thumbnail thumbnail_active', title: 'Новые поступления'})
+                        +thumbnail({className: 'swiper-slide header__thumbnail', title: 'Открытие нового офиса'})
+                        +thumbnail({className: 'swiper-slide header__thumbnail', title: 'Запуск нового проекта'})

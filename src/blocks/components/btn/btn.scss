@@ -1,0 +1,65 @@
+.btn {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    border: none;
+    padding: 0;
+    transition: $duration;
+    font-family: inherit;
+    background: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+
+    &:after {
+        position: absolute;
+        z-index: -1;
+        left: 18px;
+        top: 100%;
+        transform: translate(0, -125%) rotate(45deg);
+        background-color: inherit;
+        pointer-events: none;
+        transition: {
+            property: transform;
+            duration: $duration;
+        };
+    }
+    &:hover {
+        &::after {
+            transform: translate(0, -50%) rotate(45deg);
+        }
+    }
+}
+.btn_theme {
+    &_primary {
+        color: $white;
+        background-color: $primary;
+
+        &:hover, &.active {
+            color: $primary;
+            background-color: $secondary;
+        }
+    }
+    &_blue {
+        color: $primary;
+        background-color: $secondary;
+
+        &:hover, &.active {
+            color: $white;
+            background-color: $primary;
+        }
+    }
+}
+.btn_size {
+    &_standard {
+        min-width: rem(230);
+        padding: rem(9) rem(18);
+        font-size: rem(12);
+    }
+    &_large {
+        min-width: rem(250);
+        padding: rem(13) rem(25);
+        font-size: rem(15);
+    }
+}

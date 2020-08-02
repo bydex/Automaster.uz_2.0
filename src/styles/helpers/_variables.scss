@@ -1,0 +1,51 @@
+$sprite: '../img/sprites/sprite.svg#';
+
+// For project
+$primary:    #005AAB;
+$secondary:  #FFD400;
+$white:      #ffffff;
+$dark:       #062945;
+
+$gray-light: #fafafa;
+$gray-dark:  #ECEFF1;
+// socials
+
+
+$font-gilroy:       'Gilroy';
+$font-rubik:        'Rubik';
+$font-family-base:  $font-gilroy, sans-serif;
+$body-bg:           $white;
+$primary-color:     $dark;
+
+$h1: 64;
+$h2: 48;
+$h3: 40;
+$h4: 32;
+
+$h1-height: 112%;
+$h2-height: 117%;
+$h3-height: 120%;
+$h4-height: 125%;
+
+$text-largest:  96;
+$text-bigger:   30;
+$text-big:      24;
+$text-large:    20;
+$text-normal:   16;
+$text-small:    14;
+$text-smallest: 12;
+
+$height-largest:  200%;
+$height-bigger:   150%;
+$height-small:    133%;
+$height-smallest: 120%;
+
+$border-radius-small:   2px;
+$border-radius-biggest: 50px;
+
+$duration: .3s;
+
+$containerMax: 1312;
+$containerMin: 320;
+
+$sidebar-width: 80px;

@@ -1,0 +1,1 @@
+import svguse from 'svgxuse';

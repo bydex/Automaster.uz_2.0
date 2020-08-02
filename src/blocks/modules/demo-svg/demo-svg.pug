@@ -1,0 +1,158 @@
+
+mixin demo-svg()
+    -
+        const demoSvg = [
+            {
+                name: 'mini-logo',
+                viewbox: '0 0 58 65'
+            },
+            {
+                name: 'arrow-left',
+                viewbox: '0 0 16 16'
+            },
+            {
+                name: 'arrow-right',
+                viewbox: '0 0 16 16'
+            },
+            {
+                name: 'catalog',
+                viewbox: '0 0 24 24'
+            },
+            {
+                name: 'check',
+                viewbox: '0 0 14 11'
+            },
+            {
+                name: 'chevron-down',
+                viewbox: '0 0 14 8'
+            },
+            {
+                name: 'chevron-left',
+                viewbox: '0 0 8 14'
+            },
+            {
+                name: 'chevron-right',
+                viewbox: '0 0 8 14'
+            },
+            {
+                name: 'close',
+                viewbox: '0 0 24 24'
+            },
+            {
+                name: 'filter',
+                viewbox: '0 0 16 16'
+            },
+            {
+                name: 'filter-price-down',
+                viewbox: false
+            },
+            {
+                name: 'filter-price-up',
+                viewbox: false
+            },
+            {
+                name: 'form-mail',
+                viewbox: false
+            },
+            {
+                name: 'form-phone',
+                viewbox: false
+            },
+            {
+                name: 'form-send',
+                viewbox: false
+            },
+            {
+                name: 'hamburger',
+                viewbox: false
+            },
+            {
+                name: 'list',
+                viewbox: false
+            },
+            {
+                name: 'location',
+                viewbox: false
+            },
+            {
+                name: 'maximize',
+                viewbox: false
+            },
+            {
+                name: 'menu-blowtorch',
+                viewbox: false
+            },
+            {
+                name: 'menu-cabel',
+                viewbox: false
+            },
+            {
+                name: 'menu-carcass',
+                viewbox: false
+            },
+            {
+                name: 'menu-jack',
+                viewbox: false
+            },
+            {
+                name: 'menu-lift',
+                viewbox: false
+            },
+            {
+                name: 'menu-oil',
+                viewbox: false
+            },
+            {
+                name: 'menu-pressure',
+                viewbox: false
+            },
+            {
+                name: 'menu-speed',
+                viewbox: false
+            },
+            {
+                name: 'menu-tire',
+                viewbox: false
+            },
+            {
+                name: 'menu-wrench',
+                viewbox: false
+            },
+            {
+                name: 'menu-spray',
+                viewbox: false
+            },
+            {
+                name: 'technolgy-building',
+                viewbox: false
+            },
+            {
+                name: 'technolgy-car',
+                viewbox: false
+            },
+            {
+                name: 'technolgy-repair',
+                viewbox: false
+            },
+            {
+                name: 'technolgy-wheels',
+                viewbox: false
+            },
+            {
+                name: 'technolgy-worker',
+                viewbox: false
+            },
+        ];
+
+    .demo-svg
+        .container
+            h1.demo-svg__title.h1-heading Demo page
+            ul.demo-svg__list
+                each val, index in demoSvg
+                    li.demo-svg__item
+                        +icon({ className: 	'demo-svg__img',
+                                svgName: 	val.name,
+                                viewBoxName: val.viewbox })
+                        .demo-svg__info
+                            h4.demo-svg__name.h4-heading= val.name
+                            p.demo-svg__name.text-large= val.viewbox

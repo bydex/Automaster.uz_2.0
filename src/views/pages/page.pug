@@ -1,0 +1,12 @@
+extends ../layouts/default
+include ../helpers/mixins
+include ../../blocks/modules/demo-svg/demo-svg
+
+block variables
+	- const title = "New Page";
+
+block content
+	+demo-svg()
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

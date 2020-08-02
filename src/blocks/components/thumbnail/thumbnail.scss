@@ -1,0 +1,50 @@
+.thumbnail {
+    @include padding(bottom, level_5);
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 1px;
+        width: 100%;
+        height: 1px;
+        background-color: $white;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: rem($text-small);
+        color: $white;
+        transition: {
+            property: color;
+            duration: .5s;
+            timing-function: linear;
+        };
+    }
+    &__progressbar {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        transform: translateX(-100%);
+        width: 50%;
+        height: 3px;
+        background-color: $secondary;
+        transition: {
+            property: transform;
+            duration: .5s;
+            timing-function: linear;
+        };
+    }
+    &_active,
+    &:hover {
+        .thumbnail__title {
+            color: $secondary;
+        }
+        .thumbnail__progressbar {
+            transform: translateX(0);
+        }
+    }
+}

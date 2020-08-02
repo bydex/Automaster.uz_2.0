@@ -1,0 +1,18 @@
+.copyright {
+    @media (max-width: $break_lg) {
+        font-size: rem(10);
+    }
+    @media (max-width: $break_sm) {
+        display: none;
+    }
+    font-size: rem($text-smallest);
+    text-align: center;
+    margin-bottom: 40px;
+    &__language {
+        text-decoration: none;
+        border: none;
+        color: $dark;
+        &_active {
+        }
+    }
+}

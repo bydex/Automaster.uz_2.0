@@ -1,0 +1,36 @@
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: -6px;
+    margin-left: -6px;
+    @media (max-width: $break_sm) {
+        display: none;
+    }
+
+    &__item {
+        margin-right: 6px;
+        margin-left: 6px;
+        border-radius: 50%;
+    }
+    &__link {
+        @media (max-width: $break_lg) {
+            width: 18px;
+            height: 18px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 23px;
+        height: 23px;
+    }
+    &__img {
+        @media (max-width: $break_lg) {
+            max-width: 8px;
+            max-height: 8px;
+        }
+        max-width: 12px;
+        max-height: 12px;
+    }
+}

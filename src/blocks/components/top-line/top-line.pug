@@ -1,0 +1,11 @@
+include ../nav/nav
+include ../language/language
+
+mixin top-line({className = false})
+    .top-line(class=className)
+        +nav({className: 'top-line__nav nav_theme_white'})
+        .top-line__info
+            +language({className: 'top-line__language language_theme_white'})
+            .top-line__call
+                a(class="top-line__number" href="tel:998712766498") 998 71 276 64 98
+                .top-line__subtitle Колл-центр

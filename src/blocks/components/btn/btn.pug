@@ -1,0 +1,8 @@
+mixin btn({className = false, text, tag = 'button', href})
+    -
+        const result = `btn ${className ? className : ''}`;
+
+    if (tag === 'button')
+        button(class=result)= text
+    else if (tag === 'a')
+        a(href=href class=result)= text
